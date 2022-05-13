@@ -29,8 +29,6 @@ include Test::Unit::Assertions
   ['CMLXI', 961],
   ['CMXCIX', 999],
   ['MCMXCIX', 1999]
-].each do |expected, index|
-  assert_equal(expected, index.to_roman)
-end
+].each { |expected, index| assert_equal(expected, index.to_roman) }
 
 # If no errors, then all tests passed.
