@@ -6,6 +6,7 @@
 # Args:
 #   expression: a string containing the expression to be evaluated (operators and numbers
 #     separated by white spaces)
+
 def rpn_calculator(expression)
   stack = []
   expression.split.each do |token|
@@ -18,5 +19,5 @@ def rpn_calculator(expression)
       stack.push(token.to_i)
     end
   end
-  stack.last
+  stack.last.round(3)
 end
